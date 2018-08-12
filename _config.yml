@@ -199,7 +199,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Lisbon # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -255,6 +255,13 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  coder-dojo:
+    output: true
+    permalink: /:collection/:path/
+  python:
+    output: true
+    permalink: /coder-dojo/:collection/:path/
 
 # Defaults
 defaults:
@@ -269,3 +276,34 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  #coder-dojo
+  - scope:
+      path: "coder-dojo"
+      type: coder-dojo
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "coder-dojo"
+  # python
+  - scope:
+      path: "coder-dojo/python"
+      type: python
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "python"

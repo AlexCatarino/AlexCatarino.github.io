@@ -1,7 +1,9 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Coder Dojo"
+    url: /coder-dojo/
+  - title: "Python"
+    url: /coder-dojo/python/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -10,3 +12,17 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+coder-dojo:
+  - title: "Coder Dojo"
+    children:
+      - title: "Por quê Python?"
+        url: /coder-dojo/python/
+
+python:
+  - title: "Python"
+    children:
+      - title: "Por quê Python?"
+        url: /coder-dojo/python/
+      - title: "Guia de instalação e configuração"
+        url: /coder-dojo/python/guia-de-instalacao-e-configuracao/
